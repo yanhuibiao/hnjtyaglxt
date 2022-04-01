@@ -25,3 +25,4 @@ class Apptest:
         return cls.driver
 Apptest.get_driver().find_element(By.ID, "com.vondear.onemap:id/ed_unit_code").send_keys("1111")
 Apptest.get_driver().find_element(By.ID,  "com.vondear.onemap:id/ed_password").send_keys("222")
+#什么意思啊

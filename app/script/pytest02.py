@@ -1,5 +1,5 @@
 import time
-
+import pytest
 from selenium.webdriver.common.by import By
 
 from app.utils import Apptest
@@ -12,7 +12,6 @@ Apptest.element(By.ID, "com.vondear.onemap:id/btn_login",click=1)
 time.sleep(0.5)
 expect = Apptest.element(By.XPATH,"//*[contains(@text,'登录失败')]").text
 print(expect)
-
 class Test01:
     def test_01(self):
         print(expect)

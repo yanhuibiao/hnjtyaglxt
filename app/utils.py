@@ -1,4 +1,5 @@
 from appium import webdriver
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 
 desired_capabilities = {"platformName": "android",  # 表示的是android  或者ios
@@ -30,6 +31,24 @@ class Apptest:
 
     @classmethod
     def element(cls, by, find_values, clear=None, send_keys=None, send_keys_values=None, click=None):
+        if by == 'By.ID':
+            by = By.ID
+        elif by == "By.XPATH":
+            by = By.XPATH
+        elif by == "By.LINK_TEXT":
+            by = By.LINK_TEXT
+        elif by == "By.PARTIAL_LINK_TEXT":
+            by = By.PARTIAL_LINK_TEXT
+        elif by == "By.NAME":
+            by = By.NAME
+        elif by == "By.TAG_NAME":
+            by = By.TAG_NAME
+        elif by == "By.CLASS_NAME":
+            by = By.CLASS_NAME
+        elif by == "By.CSS_SELECTOR":
+            by = By.CSS_SELECTOR
+        else:
+            raise Exception("请输入正确的by")
         ele = WebDriverWait(Apptest.get_driver(), 5, 0.5).until(lambda x: x.find_element(by, find_values))
         if clear == 1:
             ele.clear()

@@ -137,7 +137,7 @@ class Operate_choice_page_object:
         self.l_p_o.cjwc_btn_element().click()
 
     def upload_collection_record(self):
-        time.sleep(3)
+        time.sleep(5)
         dianjitouxiang()
         self.l_p_o.sc_element().click()
         self.l_p_o.sc_1_element().click()

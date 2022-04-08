@@ -9,6 +9,10 @@ from appv1.pabg.app_login_page import Operate_login_page_object, Login_page_obje
 
 
 class Test_suit:
+    def teardown_class(self):
+        time.sleep(1)
+        utils.Get_driver().quit_driver()
+
     @pytest.mark.run(order=1)
     @pytest.mark.parametrize("username,password,collector,collector_telephone,expect", utils.get_app_data())
     @allure.step(title="登录测试")

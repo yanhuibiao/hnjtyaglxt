@@ -1,0 +1,31 @@
+[{
+  "username":"431011210",
+  "password":"3edc$RFV",
+  "collector":"捞逼刘",
+  "collector_telephone":"13412341234",
+  "expect":"用户名不存在"
+},{
+  "username":"431011211",
+  "password":"123456",
+  "collector":"捞逼刘",
+  "collector_telephone":"13412341234",
+  "expect":"密码不正确"
+},{
+  "username":"431011211",
+  "password":"",
+  "collector":"捞逼刘",
+  "collector_telephone":"13412341234",
+  "expect":"登录信息均不能为空"
+},{
+  "username":"431011211",
+  "password":"3edc$RFV",
+  "collector":"捞逼刘",
+  "collector_telephone":"110",
+  "expect":"手机号码有误"
+},{
+  "username":"431011211",
+  "password":"3edc$RFV",
+  "collector":"捞逼刘",
+  "collector_telephone":"12312341234",
+  "expect":"登录成功"
+}]
